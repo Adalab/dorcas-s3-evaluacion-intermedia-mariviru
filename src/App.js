@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import CardList from './CardList';
 import './App.css';
 
 class App extends Component {
+  
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    console.log(this);
+      return (
+        this.props.pokemons.map(function(pokemon) {
+
+          return (
+            <main className="Main">
+            <h1>Mi lista de pokemon</h1>
+            <CardList
+              id = {pokemon.id}
+              name = {pokemon.name}
+              types = {pokemon.types}
+              url = {pokemon.url}
+            />
+          </main>
+          )
+        }) 
+      )
+  };
 }
 
 export default App;
