@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
+import Card from './Card';
 import './CardList.css';
 
 class CardList extends Component {
-    render() {
-        console.log(this);
-        return (
-            <ul className="Card__list">
-                <div className="Card">
-                    <img src={this.props.url} alt="" />
-                    <p>{this.props.name}</p>
-                    <ul>
-                        <li>{this.props.types}</li>
-                    </ul>
-                </div>
-            </ul>
-        )
-    }
+  render() {
+    const { pokemon } = this.props
+    return (
+      <ul className="Card__list">
+        {pokemon.map(function (pokemon) {
+          return (
+            <Card
+              name={pokemon.name}
+              types={pokemon.types}
+              url={pokemon.url}
+            />
+
+          )
+        })}
+      </ul>
+    )
+  }
 }
 
 export default CardList;
