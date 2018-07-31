@@ -4,15 +4,14 @@ import './Card.css';
 class Card extends Component {
     render() {
         const {name, types, url} = this.props
-        console.log('card', this);
         return (
                 <li className="Card">
-                    <img src={url} alt="" />
-                    <p>{name}</p>
-                    <ul>
+                    <img className="Card__image" src={url} alt={name} />
+                    <h2 className="Card__name">{name}</h2>
+                    <ul className="Card__types-list">
                         {types.map(function(type) {
                             return (
-                                <li>{type}</li>
+                                <li className="Card__types-element" key={type}>{type}</li>
                             )
                         })}
                     </ul>

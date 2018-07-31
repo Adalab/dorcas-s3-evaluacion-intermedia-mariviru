@@ -1,0 +1,32 @@
+.Card {
+  background: aliceblue;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 160px;
+  height: 225px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+
+.Card__image {
+  align-self: center; }
+
+.Card__name {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 10px 10px;
+  text-align: center;
+  text-transform: capitalize; }
+
+.Card__types-list {
+  display: flex; }
+
+.Card__types-element {
+  background: grey;
+  border-radius: 7px;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px 3px 3px 3px;
+  margin: 10px 5px 10px 5px; }

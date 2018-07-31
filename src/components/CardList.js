@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Card from './Card';
 import './CardList.css';
 
@@ -10,6 +11,7 @@ class CardList extends Component {
         {pokemon.map(function (pokemon) {
           return (
             <Card
+              key={pokemon.id}
               name={pokemon.name}
               types={pokemon.types}
               url={pokemon.url}
@@ -21,5 +23,11 @@ class CardList extends Component {
     )
   }
 }
+
+CardList.propTypes = {
+  name: PropTypes.string,
+  types: PropTypes.array,
+  url : PropTypes.string
+};
 
 export default CardList;

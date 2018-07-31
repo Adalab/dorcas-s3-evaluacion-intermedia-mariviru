@@ -8,7 +8,7 @@ class App extends Component {
     const { pokemons } = this.props
     return (
       <main className="Main">
-        <h1>Mi lista de pokemon</h1>
+        <h1 className="Main__title">Mi lista de pokemon</h1>
         <CardList pokemon={pokemons} />
       </main>
     )
